@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+
 iptables = '/sbin/iptables'
 
 # Drop ICMP echo-request messages sent to broadcast or multicast addresses
@@ -30,6 +31,9 @@ $iptables --flush
 # Allow unlimited traffic on the loopback interface
 $iptables -A INPUT -i lo -j ACCEPT
 $iptables -A OUTPUT -o lo -j ACCEPT
+
+###By default, the default policy of iptables is to allow all connections and traffic unless explicitly disabled,so we are changing that to drop all connections
+##and allow one that are explicity defined byt setting the rules below
  
 # Set default policies
 $iptables --policy INPUT DROP
