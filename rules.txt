@@ -1,6 +1,11 @@
 #!/bin/bash
 
-
+###Notes
+#Tables, Chains , Rules
+#there are 5 tables(filter nat mangle raw recurity) and each table has rules
+#chains(prerouting input forward output postrouting) are like points in route of a packet
+#rules are user defined commands
+##Notes
 
 iptables = '/sbin/iptables'
 
