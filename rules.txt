@@ -5,6 +5,9 @@
 #there are 5 tables(filter nat mangle raw recurity) and each table has rules
 #chains(prerouting input forward output postrouting) are like points in route of a packet
 #rules are user defined commands
+#rules- iptables -A INPUT -s <target> -j DROP
+#matching component,protocol, des/source address , des/source port, inp/out address
+#target component is the action that is triggered when a criteria of a rule is met
 ##Notes
 
 iptables = '/sbin/iptables'
